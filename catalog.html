@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Девайс-каталог</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="main-header">
+        <div class="logo">
+          <a class="logo__top" href="#">Device</a>
+        </div>
+        <div class="add-service">
+          <div class="search">
+            <form action="#" method="get">
+              <button>Искать</button>
+              <input type="text" placeholder="Поиск по сайту">
+            </form>
+          </div>
+          <div class="login-compare-basket">
+            <div class="login">
+              <a class="login__user-name_top" href="#">Валентин Петухов</a>
+              <a class="login__logout-link_top" href="#">Выйти</a>
+            </div>
+            <ul class="add-nav">
+              <li class="add-nav__item"><a class="add-nav__link" href="#">Сравнить</a></li>
+              <li class="add-nav__item"><a class="add-nav__link" href="#">Корзина</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav-global">
+          <ul class="nav-global__list">
+            <li class="nav-global__item nav-glob__item_expand">Каталог товаров +
+              <ul class="nav-local">
+                <li class="nav-local__item"><a class="nav-local__link" href="#">Виртуальная реальность</a></li>
+                <li class="nav-local__item"><a class="nav-local__link" href="#">Моноподы для селфи</a></li>
+                <li class="nav-local__item"><a class="nav-local__link" href="#">Экшн-камеры</a></li>
+                <li class="nav-local__item"><a class="nav-local__link" href="#">Фитнесс-браслеты</a></li>
+                <li class="nav-local__item"><a class="nav-local__link" href="#">Умные часы</a></li>
+                <li class="nav-local__item"><a class="nav-local__link" href="#">Квадрокоптеры</a></li>
+              </ul>
+            </li>
+            <li class="nav-global__item"><a class="nav-global__link" href="#">Доставка</a></li>
+            <li class="nav-global__item"><a class="nav-global__link" href="#">Гарантия</a></li>
+            <li class="nav-global__item"><a class="nav-global__link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="content">
+        <header class="content-header">
+          <h1 class="content-header__title">Моноподы для селфи</h1>
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
+              <li class="breadcrumbs__item">Моноподы для селфи</li>
+            </ul>
+          </div>
+        </header>
+        <aside class="filter">
+          <form class="filter__form" action="#" method="post">
+            <b class="title">Фильтр:</b>
+            <fieldset class="filter__cost">
+              <legend class="filter__title">Стоимость</legend>
+              <span class="cost__label">от 0</span>
+              <input class="cost__input" type="range" min="0" max="5000">
+              <span class="cost__label">до 5000</span>
+            </fieldset>
+            <fieldset class="filter__color">
+              <legend class="filter__title">Цвет</legend>
+              <input class="color__input" type="checkbox" id="black" name="black" checked>
+              <label class="color__label" for="black">Black</label>
+              <input class="color__input" type="checkbox" id="white" name="white">
+              <label class="color__label" for="white">White</label>
+              <input class="color__input" type="checkbox" id="blue" name="blue" checked>
+              <label class="color__label" for="blue">Blue</label>
+              <input class="color__input" type="checkbox" id="red" name="red" checked>
+              <label class="color__label" for="red">Red</label>
+              <input class="color__input" type="checkbox" id="pink" name="pink">
+              <label class="color__label" for="pink">Pink</label>
+            </fieldset>
+            <fieldset class="filter__bluetooth">
+              <legend class="filter__title">Bluetooth</legend>
+              <input class="bluetooth__input" id="positive" type="radio" name="bluetooth" value="positive" checked>
+              <label class="bluetooth__label" for="positive">Есть</label>
+              <input class="bluetooth__label" id="negative" type="radio" name="bluetooth" value="negative">
+              <label class="bluetooth__input" for="negative">Нет</label>
+            </fieldset>
+            <div class="button">
+              <a class="button__link" href="#">Подробнее</a>
+            </div>
+          </form>
+        </aside>
+        <section class="catalog">
+          <header class="catalog-header">
+            <b class="title">Сортировка:</b>
+            <ul class="sorting__list">
+              <li class="sorting__item"><a class="sorting__link" href="#">По цене</a></li>
+              <li class="sorting__item"><a class="sorting__link" href="#">По типу</a></li>
+              <li class="sorting__item"><a class="sorting__link" href="#">По популярности</a></li>
+            </ul>
+            <div class="sorting__arrows">
+              <span class="up-arrow"></span>
+              <a href=""><span class="down-arrow"></span></a>
+            </div>
+          </header>
+          <article class="product">
+            <a class="product__link" href="#">
+              <img class="product__image" src="http://placehold.it/360x380" alt="Любительская селфи-палка" width="360" height="380">
+            </a>
+            <a class="product__link" href="#">
+              <h2 class="product__title">Любительская селфи-палка</h2>
+            </a>
+            <span class="product__price">500 руб.</span>
+            <div class="product__price-button">
+              <div class="button"><a class="button__link" href="#">В корзину</a></div>
+              <span class="compare">Добавить к сравнению</span>
+            </div>
+          </article>
+          <article class="product">
+            <a class="product__link" href="#">
+              <img class="product__image" src="http://placehold.it/360x380" alt="Профессиональная селфи-палка" width="360" height="380">
+            </a>
+            <a class="product__link" href="#">
+              <h2 class="product__title">Профессиональная селфи-палка</h2>
+            </a>
+            <span class="product__price">1500 руб.</span>
+            <div class="product__price-button">
+              <div class="button"><a class="button__link" href="#">В корзину</a></div>
+              <span class="compare">Добавить к сравнению</span>
+            </div>
+          </article>
+          <article class="product">
+            <a class="product__link" href="#">
+              <img class="product__image" src="http://placehold.it/360x380" alt="Непотопляемая селфи-палка" width="360" height="380">
+            </a>
+            <a class="product__link" href="#">
+              <h2 class="product__title">Непотопляемая селфи-палка</h2>
+            </a>
+            <span class="product__price">2500 руб.</span>
+            <div class="product__price-button">
+              <div class="button"><a class="button__link" href="#">В корзину</a></div>
+              <span class="compare">Добавить к сравнению</span>
+            </div>
+          </article>
+          <article class="product">
+            <a class="product__link" href="#">
+              <img class="product__image" src="http://placehold.it/360x380" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
+            </a>
+            <span class="product__new-label">New</span>
+            <a class="product__link" href="#">
+              <h2 class="product__title">Селфи-палка «Следуй за мной»</h2>
+            </a>
+            <span class="product__price">4900 руб.</span>
+            <div class="product__price-button">
+              <div class="button"><a class="button__link" href="#">В корзину</a></div>
+              <span class="compare">Добавить к сравнению</span>
+            </div>
+          </article>
+          <footer class="catalog-footer">
+            <span class="prev">Назад</span>
+            <ul class="paging">
+              <li class="paging__item paging__item_active">1</li>
+              <li class="paging__item"><a class="paging__link" href="#">2</a></li>
+              <li class="paging__item"><a class="paging__link" href="#">3</a></li>
+            </ul>
+            <span class="next"><a class="next__link" href="#">Вперед</a></span>
+          </footer>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="logo-userblock">
+          <div class="logo">
+            <a class="logo__bottom" href="#">Device</a>
+          </div>
+          <div class="login-compare-basket">
+            <div class="login">
+              <a class="login__user-name_bottom" href="#">Валентин Петухов</a>
+              <a class="login__logout-link_bottom" href="#">Выйти</a>
+            </div>
+            <ul class="add-nav">
+              <li class="add-nav__item"><a class="add-nav__link_bottom" href="#">Сравнить</a></li>
+              <li class="add-nav__item"><a class="add-nav__link_bottom" href="#">Корзина</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="adress-nav-tel">
+          <span class="adress">г. Москва, ул. Строителей, 15</span>
+          <div class="bottom-nav">
+            <ul class="bottom-nav__list">
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="#">Доставка</a></li>
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="#">Гарантия</a></li>
+              <li class="bottom-nav__item"><a class="bottom-nav__link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <span class="tel">Тел.: <a href="tel:+7(495)495-95-95">+7 (495) 495-95-95</a></span>
+        </div>
+        <div class="socials-htmllogo">
+          <div class="socials">
+            <a href="#"><img class="socials__img" src="http://placehold.it/38x38" alt="vk" width="38" height="38"></a>
+            <a href="#"><img class="socials__img" src="http://placehold.it/38x38" alt="fb" width="38" height="38"></a>
+            <a href="#"><img class="socials__img" src="http://placehold.it/38x38" alt="tw" width="38" height="38"></a>
+          </div>
+          <a class="html-logo" href="#"><img class="html-logo__img" src="http://placehold.it/27x34" alt="Карта" width="27" height="34"></a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
