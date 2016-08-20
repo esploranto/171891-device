@@ -1,0 +1,51 @@
+body {
+  font-size: 15px;
+  line-height: 30px;
+  color: #464646;
+  font-weight: light;
+  font-family: "Open Sans", "Verdana", serif;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Gilroy", "Arial", sans;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.logo__top {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo__top:hover {
+  color: #464646;
+}
+
+.logo__top:active {
+  color: #666666;
+}
+
+.logo__bottom {
+  color: #f7e184;
+  text-decoration: none;
+}
+
+.logo__bottom:hover {
+  color: #f0c52e;
+}
+
+.logo__bottom:active {
+  color: #f0c52e;
+  opacity: 0.3;
+}
+
+
+.title {
+  font-size: 47px;
+  line-height: normal;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
