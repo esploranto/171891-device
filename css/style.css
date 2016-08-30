@@ -288,9 +288,9 @@ body {
   min-height: 490px;
 }
 
-/* .promo-slider input[type="radio"] {
+.promo-slider input[type="radio"] {
   display: none;
-} */
+}
 
 .slider-controls__label {
   display: inline-block;
@@ -311,6 +311,7 @@ body {
   bottom: 120px;
   width: 200px;
   text-align: center;
+  z-index: 5;
 }
 
 .promo-slider__item {
