@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Light'), local('Gilroy-Light'), url('Gilroylight.woff2') format('woff2'), url('Gilroylight.woff') format('woff'), url('Gilroylight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'), url('Gilroyextrabold.woff2') format('woff2'), url('Gilroyextrabold.woff') format('woff'), url('Gilroyextrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 body {
-  padding-top: 5px;
   font-size: 15px;
   line-height: 30px;
   color: #464646;
@@ -16,8 +28,9 @@ body {
 .main-header {
   position: relative;
   background-color: #f7e296;
-  padding: 0 60px;
-  height: 299px;
+  margin-top: 40px;
+  padding: 43px 60px 0;
+  height: 256px;
 }
 .logo {
   font-size: 48px;
@@ -25,7 +38,6 @@ body {
   font-family: "Gilroy", "Arial", sans;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 35px;
 }
   .logo__header {
     position: absolute;
@@ -43,8 +55,8 @@ body {
 
 /* Поиск, войти, сравнить, корзина */
 .add-service {
-  padding-top: 51px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
+  height: 51px;
 }
 .search {
   float: left;
@@ -58,21 +70,22 @@ body {
   border: none;
   box-shadow: none;
   background: none;
-  color: #000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 1.0);
   padding-left: 35px;
+  box-sizing: content-box;
+}
+.search__input:focus {
+  outline: none;
 }
 .search__input:hover {
-  color: #000;
-  opacity: 0.4;
+  color: rgba(0, 0, 0, 0.3);
 }
 .search__input_search-ico {
   background: url('../img/search.png') 0 60% no-repeat;
-  opacity: 1;
 }
 .search__input:active {
   border-bottom: 2px solid #000;
-  opacity: 1;
+  color: rgba(0, 0, 0, 1.0);
 }
 .search__button {
   display: none;
@@ -225,7 +238,7 @@ body {
 .nav-local {
   position: absolute;
   width: 1160px;
-  height: 134px;
+  height: 141px;
   background-color: #f7e296;
   z-index: 1;
   margin-left: -60px;
@@ -260,6 +273,7 @@ body {
 
 .nav-glob__item_expand:hover .nav-local {
   display: block;
+  z-index: 3;
 }
 
 .nav-glob__item_expand {
@@ -280,52 +294,44 @@ body {
 .promo-slider {
   position: relative;
   padding: 0 60px;
-  margin-bottom: 120px;
+  margin-bottom: 85px;
   margin-top: -111px;
+  height: 490px;
 }
-
 .promo-slider__item {
-  min-height: 490px;
+  position: relative;
+  display: none;
+  height: 490px;
 }
-
 .promo-slider input[type="radio"] {
   display: none;
 }
-
 .slider-controls__label {
   display: inline-block;
   width: 4px;
   height: 4px;
   margin: 0 9px;
   vertical-align: top;
-  background: #fff;
   border: 3px solid #000;
   border-radius: 50%;
-  /* opacity: 0.3; */
+  opacity: 0.3;
   cursor: pointer;
 }
-
 .slider-controls {
   position: absolute;
   right: 67px;
-  bottom: 120px;
+  top: 313px;
   width: 200px;
   text-align: center;
-  z-index: 5;
-}
-
-.promo-slider__item {
-  display: none;
+  z-index: 2;
 }
 
 #btn-1:checked ~ .promo-slider__slides .promo-slider__item:nth-child(1) {
   display: block;
 }
-
 #btn-2:checked ~ .promo-slider__slides .promo-slider__item:nth-child(2) {
   display: block;
 }
-
 #btn-3:checked ~ .promo-slider__slides .promo-slider__item:nth-child(3) {
   display: block;
 }
@@ -333,26 +339,13 @@ body {
 #btn-1:checked ~ .slider-controls label[for="btn-1"],
 #btn-2:checked ~ .slider-controls label[for="btn-2"],
 #btn-3:checked ~ .slider-controls label[for="btn-3"] {
-  background: #c1c1c1;
-}
-
-#btn-1:checked ~ .site-wrapper #slide1,
-#btn-2:checked ~ .site-wrapper #slide2,
-#btn-3:checked ~ .site-wrapper #slide3 {
-  display: block;
-}
-
-
-
-.promo-slider__item {
-  position: relative;
+  opacity: 1;
 }
 
 .item-image {
   float: left;
   width: 500px;
 }
-
 .item-image__img_align {
   padding-top: 65px;
   margin-left: -30px;
@@ -381,6 +374,7 @@ body {
 }
 
 .promo-slider__title {
+  display: inline-block;
   position: relative;
   font-size: 47px;
   line-height: normal;
@@ -417,7 +411,7 @@ body {
   font-family: "Gilroy", "Arial", sans;
   text-transform: uppercase;
   letter-spacing: 3.7px;
-  color: #000;
+  color: rgba(0, 0, 0, 1.0);
   padding: 0 42px;
   margin-bottom: 64px;
   z-index: 1;
@@ -448,11 +442,11 @@ body {
 }
 
 .promo-slider__button:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 
-/* Фактоиды */
+/* Фактоиды в промо-слайдере */
 .promo-slider__slide-features {
   margin-top: 58px;
 }
@@ -468,49 +462,20 @@ body {
 }
 
 .slide-feature__factoid {
+  display: block;
   font-size: 36px;
   line-height: normal;
   font-family: "Gilroy", "Arial", sans;
   color: #000;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .slide-feature__description {
+  display: block;
   font-size: 13px;
   line-height: 20px;
   color: #464646;
 }
-
-/* Промо-слайдер, индикаторы */
-/* .slide-controls {
-  position: absolute;
-  right: 67px;
-  bottom: 163px;
-}
-
-.slide-controls__marker {
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 3px solid #000;
-  opacity: 0.3;
-  margin-right: 19px;
-}
-
-.slide-indicator__marker_active,
-.slide-indicator__marker_active:hover {
-    opacity: 1;
-}
-
-.slide-controls__marker:hover {
-  opacity: 0.4;
-}
-
-.slide-controls_active {
-  opacity: 1;
-} */
 
 /* Популярные товары */
 .popular-categories {
@@ -524,34 +489,19 @@ figure {
 .popular-item {
   display: inline-block;
   vertical-align: top;
+  margin-right: 36px;
+}
+.popular-item:last-child {
+  margin-right: 0;
 }
 
 .popular-item__img {
+  position: relative;
   display: block;
   width: 160px;
   height: 160px;
-  margin-right: 36px;
   margin-bottom: 34px;
-}
-
-.popular-item__img_1 {
-  background: #f7e296 url('../img/popular-1.png') 50% 50% no-repeat;
-}
-.popular-item__img_2 {
-  background: #f7e296 url('../img/popular-2.png') 50% 100% no-repeat;
-}
-.popular-item__img_3 {
-  background: #f7e296 url('../img/popular-3.png') 50% 50% no-repeat;
-}
-.popular-item__img_4 {
-  background: #f7e296 url('../img/popular-4.png') 50% 50% no-repeat;
-}
-.popular-item__img_5 {
-  background: #f7e296 url('../img/popular-5.png') 50% 50% no-repeat;
-}
-.popular-item__img_6 {
-  background: #f7e296 url('../img/popular-6.png') 50% 50% no-repeat;
-  margin-right: 0;
+  background-color: rgba(247, 226, 150, 1.0)
 }
 
 .popular-item__title {
@@ -569,14 +519,54 @@ figure {
 }
 
 .popular-item__img:hover {
-  background-color: #f0c52e;
+  background-color: rgba(240, 197, 46, 1.0)
 }
 
 .popular-item__img:active {
+  background-color: rgba(240, 197, 46, 1.0)
+}
+
+.popular-item__img_1 {
+  position: absolute;
+  top: 51px;
+  left: 31px;
+}
+.popular-item__img_2 {
+  position: absolute;
+  bottom: 0;
+  left: 38px;
+}
+.popular-item__img_3 {
+  position: absolute;
+  top: 38px;
+  left: 49px;
+}
+.popular-item__img_4 {
+  position: absolute;
+  top: 50px;
+  left: 28px;
+}
+.popular-item__img_5 {
+  position: absolute;
+  top: 32px;
+  left: 55px;
+}
+.popular-item__img_6 {
+  position: absolute;
+  top: 49px;
+  left: 13px;
+}
+
+.popular-item__img_1:active,
+.popular-item__img_2:active,
+.popular-item__img_3:active,
+.popular-item__img_4:active,
+.popular-item__img_5:active,
+.popular-item__img_6:active {
   opacity: 0.3;
 }
 
-/* Сервис */
+/* Слайдер сервиса */
 .service-slider {
   background-color: #e5e5e5;
   margin-bottom: 94px;
@@ -597,6 +587,7 @@ figure {
   }
   .service-nav__item {
     margin-bottom: 50px;
+    color: rgba(0, 0, 0, 1.0);
   }
   .service-nav__item_active {
     position: relative;
@@ -627,11 +618,15 @@ figure {
     font-family: "Gilroy", "Arial", sans;
     text-transform: uppercase;
     letter-spacing: 3.7px;
-    color: #000;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  .service-nav__link:active {
+    color: rgba(0, 0, 0, 0.3);
   }
   .service-nav__item_button {
     position: relative;
     z-index: 1;
+    cursor: pointer;
   }
   .service-nav__item_button::before {
     position: absolute;
@@ -655,9 +650,6 @@ figure {
     height: 40px;
     background-color: #f0c52e;
   }
-  .service-nav__item_button:active {
-    opacity: 0.3;
-  }
   .service-nav::after {
     position: absolute;
     bottom: 8px;
@@ -671,8 +663,13 @@ figure {
 
 .service-slider__item {
   float: right;
+  display: none;
   width: 880px;
 }
+.service-slider input[type="radio"] {
+  display: none;
+}
+
   .service-slider__description {
     float: left;
     padding-left: 120px;
@@ -680,6 +677,7 @@ figure {
     margin-top: -33px;
   }
     .service-slider__title {
+      display: inline-block;
       font-size: 47px;
       line-height: normal;
       color: #000;
@@ -703,6 +701,22 @@ figure {
   clear: both;
 }
 
+#slide-1:checked ~ .service-slider__slides .service-slider__item:nth-child(1) {
+  display: block;
+}
+#slide-2:checked ~ .service-slider__slides .service-slider__item:nth-child(2) {
+  display: block;
+}
+#slide-3:checked ~ .service-slider__slides .service-slider__item:nth-child(3) {
+  display: block;
+}
+
+#slide-1:checked ~ .service-nav__list li[for="slide-1"],
+#slide-2:checked ~ .service-nav__list li[for="slide-2"],
+#slide-3:checked ~ .service-nav__list li[for="slide-3"] {
+  opacity: 1;
+}
+
 
 /* Кладбище логотипов */
 .logos-cemetery {
@@ -721,7 +735,6 @@ figure {
     display: block;
     width: 260px;
     height: 100px;
-
   }
   .logos-cemetery__img_1 {
     background: url('../img/logo-1.jpg') no-repeat;
@@ -780,6 +793,7 @@ figure {
 }
 
 .about-contacts__title {
+  display: inline-block;
   position: relative;
   font-size: 47px;
   line-height: normal;
@@ -787,13 +801,13 @@ figure {
   font-weight: bold;
   letter-spacing: 0.5px;
   font-family: "Gilroy", "Arial", sans;
+  margin-bottom: 37px;
   z-index: 1;
 }
 
 .about-contacts__description {
   margin: 0;
   width: 560px;
-  padding-top: 37px;
 }
 .about-contacts__description-message {
   margin-top: 0;
@@ -843,7 +857,7 @@ figure {
   font-family: "Gilroy", "Arial", sans;
   text-transform: uppercase;
   letter-spacing: 3.7px;
-  color: #000;
+  color: rgba(0, 0, 0, 1.0);
   text-align: center;
   width: 260px;
   z-index: 1;
@@ -871,15 +885,15 @@ figure {
     background-color: #f0c52e;
   }
   .about-contacts__button:active {
-    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.3);
   }
 
 /* Подвал */
 .main-footer {
-  padding: 34px 40px;
+  padding: 64px 40px 0;
   background-color: #464646;
   color: #fff;
-  min-height: 323px;
+  height: 259px;
 }
 
 .logo-userblock {
@@ -1020,10 +1034,3 @@ figure {
   display: table;
   clear: both;
 }
-
-
-
-
-
-
-
