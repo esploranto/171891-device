@@ -3,43 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс-каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header">
+      <header class="main-header main-header__catalog">
         <div class="logo">
           <a class="logo__header" href="#">Device</a>
         </div>
         <div class="add-service">
           <div class="search">
             <form action="#" method="get">
-              <input class="search__input" type="text" placeholder="Поиск по сайту">
-              <button class="search__button">Искать</button>
+              <input class="search__input search__input_search-ico" type="text" placeholder="Поиск по сайту">
+              <button class="search__button">Найти</button>
             </form>
           </div>
           <div class="user-profile">
-            <div class="user-profile__login">
-              <a class="user-profile__login_header" href="#">Валентин Петухов</a>
+            <div class="user-profile-login">
+              <a class="user-profile-login_header" href="#">Валентин Петухов</a>
               <a class="user-profile__logout_header" href="#">Выйти</a>
+              <!-- <a class="user-profile-login_header" href="#">Войти</a> -->
             </div>
             <ul class="add-nav">
-              <li class="add-nav__item add-nav__compare"><a class="add-nav__link_header" href="#">Сравнить</a></li>
-              <li class="add-nav__item add-nav__cart"><a class="add-nav__link_header" href="#">Корзина</a></li>
+              <li class="add-nav__item add-nav__compare_header"><a class="add-nav__link_header" href="#">Сравнить</a></li>
+              <li class="add-nav__item add-nav__cart_header"><a class="add-nav__link_header" href="#">Корзина</a></li>
             </ul>
           </div>
         </div>
         <nav class="nav-global">
           <ul class="nav-global__list">
-            <li class="nav-global__item nav-glob__item_expand"><a class="nav-global__link" href="#">Каталог товаров</a>
+            <li class="nav-global__item nav-glob__item_expand"><a class="nav-global__link nav-global__link_plus" href="#">Каталог товаров</a>
               <ul class="nav-local">
-                <li class="nav-local__item"><a class="nav-local__link" href="#">Виртуальная реальность</a></li>
-                <li class="nav-local__item"><a class="nav-local__link" href="#">Моноподы для селфи</a></li>
-                <li class="nav-local__item"><a class="nav-local__link" href="#">Экшн-камеры</a></li>
-                <li class="nav-local__item"><a class="nav-local__link" href="#">Фитнесс-браслеты</a></li>
-                <li class="nav-local__item"><a class="nav-local__link" href="#">Умные часы</a></li>
-                <li class="nav-local__item"><a class="nav-local__link" href="#">Квадрокоптеры</a></li>
+                <li class="nav-local__col">
+                  <ul class="nav-local__list">
+                    <li class="nav-local__item"><a class="nav-local__link" href="#">Виртуальная реальность</a></li>
+                    <li class="nav-local__item"><a class="nav-local__link" href="#">Моноподы для селфи</a></li>
+                    <li class="nav-local__item"><a class="nav-local__link" href="#">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+                <li class="nav-local__col">
+                  <ul class="nav-local__list">
+                    <li class="nav-local__item"><a class="nav-local__link" href="#">Фитнесс-браслеты</a></li>
+                    <li class="nav-local__item"><a class="nav-local__link" href="#">Умные часы</a></li>
+                  </ul>
+                </li>
+                <li class="nav-local__col">
+                  <ul class="nav-local__list">
+                    <li class="nav-local__item"><a class="nav-local__link" href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li class="nav-global__item"><a class="nav-global__link" href="#">Доставка</a></li>
@@ -48,19 +62,25 @@
           </ul>
         </nav>
       </header>
+    </div>
+
+    <div class="content-wrapper">
       <main class="content">
         <header class="content-header">
           <h1 class="content-header__title">Моноподы для селфи</h1>
           <ul class="breadcrumbs">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
-            <li class="breadcrumbs__item">Моноподы для селфи</li>
+            <li class="breadcrumbs__item breadcrumbs__item_nav-arrow"><a class="breadcrumbs__link" href="#">Главная</a></li>
+            <li class="breadcrumbs__item breadcrumbs__item_nav-arrow"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link">Моноподы для селфи</a></li>
           </ul>
         </header>
-        <aside class="sidebar">
+
+        <div class="sidebar">
           <section class="filter">
             <form action="#" method="post">
-              <b class="filter__title">Фильтр:</b>
+              <div class="sidebar__title">
+                <b class="caps-word">Фильтр:</b>
+              </div>
               <fieldset class="filter__group">
                 <legend class="filter__group-title">Стоимость</legend>
                 <div class="filter__slider"></div>
@@ -71,32 +91,47 @@
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__group-title">Цвет</legend>
-                <input class="filter__checkbox" type="checkbox" id="black" name="black" checked>
-                <label class="filter__checkbox-label" for="black">Black</label>
-                <input class="filter__checkbox" type="checkbox" id="white" name="white">
-                <label class="filter__checkbox-label" for="white">White</label>
-                <input class="filter__checkbox" type="checkbox" id="blue" name="blue" checked>
-                <label class="filter__checkbox-label" for="blue">Blue</label>
-                <input class="filter__checkbox" type="checkbox" id="red" name="red" checked>
-                <label class="filter__checkbox-label" for="red">Red</label>
-                <input class="filter__checkbox" type="checkbox" id="pink" name="pink">
-                <label class="filter__checkbox-label" for="pink">Pink</label>
+                <div class="filter__group_input-label">
+                  <input class="filter__checkbox" type="checkbox" id="black" name="black" checked>
+                  <label class="filter__checkbox-label" for="black">Black</label>
+                </div>
+                <div class="filter__group_input-label">
+                  <input class="filter__checkbox" type="checkbox" id="white" name="white">
+                  <label class="filter__checkbox-label" for="white">White</label>
+                </div>
+                <div class="filter__group_input-label">
+                  <input class="filter__checkbox" type="checkbox" id="blue" name="blue" checked>
+                  <label class="filter__checkbox-label" for="blue">Blue</label>
+                </div>
+                <div class="filter__group_input-label">
+                  <input class="filter__checkbox" type="checkbox" id="red" name="red" checked>
+                  <label class="filter__checkbox-label" for="red">Red</label>
+                </div>
+                <div class="filter__group_input-label">
+                  <input class="filter__checkbox" type="checkbox" id="pink" name="pink">
+                  <label class="filter__checkbox-label" for="pink">Pink</label>
+                </div>
               </fieldset>
               <fieldset class="filter__group">
                 <legend class="filter__group-title">Bluetooth</legend>
-                <input class="filter__radio" id="positive" type="radio" name="bluetooth" value="positive" checked>
-                <label class="filter__radio-label" for="positive">Есть</label>
-                <input class="filter__radio" id="negative" type="radio" name="bluetooth" value="negative">
-                <label class="filter__radio-label" for="negative">Нет</label>
+                <div class="filter__group_input-label">
+                  <input class="filter__radio" id="positive" type="radio" name="bluetooth" value="positive" checked>
+                  <label class="filter__radio-label" for="positive">Есть</label>
+                </div>
+                <div class="filter__group_input-label">
+                  <input class="filter__radio" id="negative" type="radio" name="bluetooth" value="negative">
+                  <label class="filter__radio-label" for="negative">Нет</label>
+                </div>
               </fieldset>
               <a class="filter__button" href="#">Подробнее</a>
             </form>
           </section>
-        </aside>
+        </div>
+
         <section class="catalog">
           <header class="catalog__header">
-            <b class="catalog__title">Сортировка:</b>
-            <ul class="sorting__list">
+            <b class="catalog__header_item caps-word">Сортировка:</b>
+            <ul class="catalog__header_item sorting__list">
               <li class="sorting__item"><a class="sorting__link" href="#">По цене</a></li>
               <li class="sorting__item"><a class="sorting__link" href="#">По типу</a></li>
               <li class="sorting__item"><a class="sorting__link" href="#">По популярности</a></li>
@@ -106,6 +141,7 @@
               <a href=""><span class="soting-arrows__arrow soting-arrows__arrow_down"></span></a>
             </div>
           </header>
+
           <article class="product">
             <img class="product__image" src="img/item-1.jpg" alt="Любительская селфи-палка" width="360" height="380">
             <a class="product__link" href="#">
@@ -141,7 +177,7 @@
           </article>
           <article class="product">
             <img class="product__image" src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»" width="360" height="380">
-            <span class="product__new-label">New</span>
+<!--             <span class="product__new-label">New</span> -->
             <a class="product__link" href="#">
               <h2 class="product__title">Селфи-палка «Следуй за мной»</h2>
             </a>
@@ -151,18 +187,20 @@
               <span class="product__overlay-compare">Добавить к сравнению</span>
             </div>
           </article>
+
           <footer class="catalog__footer">
             <ul class="paging">
-              <li class="paging__item paging__prev">Назад</li>
-              <li class="paging__item paging__item_active">1</li>
-              <li class="paging__item"><a class="paging__link" href="#">2</a></li>
-              <li class="paging__item"><a class="paging__link" href="#">3</a></li>
-              <li class="paging__item paging__next"><a class="paging__link" href="#">Вперед</a></li>
+              <li class="paging__item paging__prev"><a class="caps-word">Назад</a></li>
+              <li class="paging__item paging__item_active"><a class="caps-word">1</a></li>
+              <li class="paging__item"><a class="caps-word caps-word_opp" href="#">2</a></li>
+              <li class="paging__item"><a class="caps-word caps-word_opp" href="#">3</a></li>
+              <li class="paging__item paging__next"><a class="caps-word" href="#">Вперед</a></li>
             </ul>
           </footer>
         </section>
       </main>
     </div>
+
     <footer class="main-footer">
       <div class="wrapper">
         <div class="logo-userblock">
@@ -171,7 +209,7 @@
           </div>
           <div class="user-profile">
             <ul class="add-nav">
-              <li class="add-nav__item user-profile__login"><a class="user-profile__login_footer" href="#">Выйти</a></li>
+              <li class="add-nav__item user-profile-login"><a class="user-profile-login_footer" href="#">Выйти</a></li>
               <li class="add-nav__item add-nav__compare_footer"><a class="add-nav__link_footer" href="#">Сравнить</a></li>
               <li class="add-nav__item add-nav__cart_footer"><a class="add-nav__link_footer" href="#">Корзина</a></li>
             </ul>
